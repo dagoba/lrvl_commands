@@ -60,7 +60,7 @@ class StatService implements StatServiceInterface
 
     public function getByCountry(string $country): ?Collection
     {
-        // ... 
+        return Countries::where('name', '=', $country)->get();
     }
 
     private function getCountryByName(string $name): Countries
